@@ -126,12 +126,18 @@ public class GUI_Presentacion extends JFrame /*Heredo de JFrame para GUI_present
         }
 
         @Override
-        public void mouseClicked(MouseEvent e) {
-             panelDatos.removeAll();
-            if (e.getSource()==miHobby & e.getClickCount()==2){
-                image = new ImageIcon(getClass().getResource("/recursos/miH_opt.jpg"));
+          public void mouseClicked(MouseEvent e) {
+            panelDatos.removeAll();
+            if (e.getSource()==miFoto & e.getClickCount()==1){
+                image = new ImageIcon(getClass().getResource("/recursos/miFoto_opt.jpg"));
                 labelImagen.setIcon(image);
                 panelDatos.add(labelImagen);
+            }else{
+                if (e.getSource()==miHobby & e.getClickCount()==2){
+                    image = new ImageIcon(getClass().getResource("/recursos/miH_opt.jpg"));
+                    labelImagen.setIcon(image);
+                    panelDatos.add(labelImagen);
+                }
             }
             revalidate();
             repaint();
