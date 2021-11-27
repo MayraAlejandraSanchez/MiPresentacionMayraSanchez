@@ -149,14 +149,7 @@ public class GUI_Presentacion extends JFrame /*Heredo de JFrame para GUI_present
         }
 
         public void mouseReleased(MouseEvent e) {
-            panelDatos.removeAll();
-            if (e.getSource()==miFoto){
-                image = new ImageIcon(getClass().getResource("/recursos/miFoto_opt.jpg"));
-                labelImagen.setIcon(image);
-                panelDatos.add(labelImagen);
-            }
-            revalidate();
-            repaint();
+           
         }
 
         @Override
